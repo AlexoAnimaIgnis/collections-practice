@@ -16,4 +16,6 @@ Key Features:
 - E remove(int index)
 - E set(int index, E element)
 - boolean addAll(int index, Collection c)
-- sublist
+- List<E> sublist(int fromIndex, int toIndex)
+
+Implementations: ArrayList and linkedList
