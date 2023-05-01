@@ -11,7 +11,7 @@ Each element in the List has an index, which represents its position in the list
 
 Key Features:
 
-```
+```java
 - void add(int index, E e);
 - E get(int index)
 - E remove(int index)
@@ -31,7 +31,7 @@ extend or implement the Java Collections Interface
 - values doesnt have to be unique
 
 Key features:
-```
+```kotlin 
 - V put(K key, V value)
 - void putAll(Map<? extends K, ? extends V> values)
 - V get(Object key) // look up elements
@@ -47,7 +47,17 @@ Key features:
 - Map<String, Integer> personToAge = Map.of("Alexo", 27);
 - personToAge = Map.ofEntries(Map.entry("Alexo", 28));
 - Map<String, Integer> copy = Map.copyOf(personToAge);
+
 ```
 
 Adding and replacing -> use put for a single value, putAll for another Map
 Null keys and values are implementation specific
+
+
+Views over Maps
+- has a bidirectional relationship
+
+```kotlin
+var ids = idToProduct.keySet(); // returns unique set of KEYS
+var values = idToProduct.values(); // returns collection of values
+```
