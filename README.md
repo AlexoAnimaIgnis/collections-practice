@@ -11,7 +11,7 @@ Each element in the List has an index, which represents its position in the list
 
 Key Features:
 
-```java
+```kotlin
 - void add(int index, E e);
 - E get(int index)
 - E remove(int index)
@@ -61,3 +61,18 @@ Views over Maps
 var ids = idToProduct.keySet(); // returns unique set of KEYS
 var values = idToProduct.values(); // returns collection of values
 ```
+
+Advance operations added in java 8 and 17 range
+- replace(key, value) -> update a single value.
+  - put will add in a key and value pair into the map, even if it isnt there
+  - replace will not do anything if the object is not in the map
+- replaceAll(BiFunction<K,V,V)) -> replace elements using a function
+- removes(key, value) -> removes a key only if it has a value
+- getOrDefault -> returns a default value if get is null
+- computeIfAbsent -> takes a function that lets you compute a value if the key is not associated with a value
+  - or if the value is null
+- putIfAbsent
+- computeIfPresent
+- compute
+- merge -> takes a key and value and a remapping function
+- forEach
